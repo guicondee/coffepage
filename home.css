@@ -1,6 +1,6 @@
 *{
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -20,39 +20,51 @@ body{
   background: black;
   color: aliceblue;
   
-  overflow-x: hidden;
+  text-align: center;
+
+  overflow: overlay;
 }
+ 
 
 header{
-  width: 100vw;
+  /* width: 100vw; */
   height: 5.85rem;
-  top: 3.7rem;
   border-bottom: 1px solid #29292E;
-}
+  padding-left: 2.6rem;
+  padding-right: 2.5rem;
+  margin-top: 3.7rem; 
+  padding-bottom: 3rem;
 
-.navigation{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-left: 2.6rem;
-  padding-right: 3.5rem;
-  margin-top: 3.7rem;
+  justify-content: space-between; 
+}
+
+header .btn-open{
+  position: absolute;
+  margin-left: 40rem;
+   
+}
+
+ 
+img{
+  max-width: 100%;
 }
 
 .logo{
   position: absolute;
+   
 }
  
 .container{
    width: min(50rem, 100%);
-  /* height: 100vh; */
+  
   
   margin-inline: auto;
-  padding-inline: 2.7rem;
-  
+  /* padding-inline: 2.7rem; */
 }
-
-.container h1{
+ 
+.content h1{
   font-weight: 600;
   font-size: 3.0rem;
   line-height: 4.1rem;
@@ -60,13 +72,10 @@ header{
   letter-spacing: 0.02em;
 
   color: #FFFFFF;
-
-  margin-left: 2.8rem;
-  margin-right: 2.7rem;
   margin-top: 8.85rem;
 }
 
-.container button{
+.content button{
   display: flex;
   align-items: center;
   padding: 1.0rem 2.5rem;
@@ -79,8 +88,7 @@ header{
   color: white;
  
    
-  margin-left: 12.8rem;
-  margin-right: 12.7rem;
+  margin-inline: auto;
   margin-top: 8.8rem;
 
   font-weight: 600;
@@ -94,36 +102,103 @@ header{
   transition: .2s;
 }
 
-.container button:hover{
+.content button:hover{
   background: #8257E5;
   filter: brightness(1.1);
 }
  
 .assets{
-  background: rgb(0,0,0);
+   background: rgb(0,0,0);
   background:
   linear-gradient(180deg, rgba(0,0,0,1) 0%, 
   rgba(59,42,93,1) 100%, 
-  rgba(0,212,255,1) 100%);
-
-   width: min(50rem, 100%);
-   margin-inline: auto; 
-   padding-inline: 2.7rem;
-  
+  rgba(0,212,255,1) 100%); 
  }
 
 .assets img{
   margin-top: 9.8rem;
-  margin-left: 4.2rem;
-  margin-right: 4.0rem;
-   
 }  
-.assets img:nth-child(2){
-  margin-left: 0;
-  margin-top: 2.5rem;
+nav .menu,
+nav .close-menu{
+  position: fixed;
+}
+
+/*======= MENU EXPANDED ======== */
+body.menu-expanded .menu {
+  transform: translateY(100%);
+} 
+
+body.menu-expanded {
+  overflow: hidden;
+  
+}
+
+body.menu-expanded > :not(nav) {
+  visibility: hidden;
+}   
+
+.menu,
+.btn-close,
+body.menu-expanded .btn-open {
+  opacity: 0;
+  visibility: hidden;
+   
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .btn-close {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.menu-expanded .menu {
+  top: 0;
+  left: 0;
+  /* background: var(--brand-green); */
+
+  width: 100vw;
+  height: 100vh;
+
+  padding-top: 3.7rem; 
+
+  /* deslocar menu suavemente */
+  transition: transform 500ms;
+  transform: translateY(0);
+}
+
+ body.menu-expanded .menu ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+
+  
+  
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  
+  
+
+  margin-top: 6rem;
+  text-align: left;
+  list-style: none;
+} 
+
+body.menu-expanded .menu li{
+  border-bottom: 1px solid #29292E;
+ 
+  padding: 1.1rem 0 1.4rem 3.1rem; 
+}
+
+body.menu-expanded .menu ul li a{
+  color: #A8A8B3;
+  text-decoration: none;
 }
  
-
-   
+body.menu-expanded .btn-close{
+  position: relative;
+  z-index: 100;
+}
+ 
  
  
