@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="">
     <nav class="navigation">
       <div class="container">
         <header>
@@ -82,21 +82,20 @@
               />
             </svg>
 
-          <a class="btn-open"         onclick="openMenu()"
-          href="">
-              <svg
-                width="24"
-                height="8"
-                viewBox="0 0 24 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M24 0H0V2H24V0Z" fill="#8257E5" />
-                <path d="M24 6H8V8H24V6Z" fill="#8257E5" />
-              </svg>
-          </a>
-
-          <a class="btn-close" onclick="closeMenu()" href="#">
+           <button onclick=" openMenu()" class="btn-open">
+            <svg
+            width="24"
+            height="8"
+            viewBox="0 0 24 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M24 0H0V2H24V0Z" fill="#8257E5" />
+            <path d="M24 6H8V8H24V6Z" fill="#8257E5" />
+          </svg>
+           </button>
+             
+          <button onclick="closeMenu()" class="btn-close">
             <svg
               width="48"
               height="48"
@@ -105,7 +104,7 @@
               <path d="M32.4963 31.0872L16.9399 15.5309L15.5257 16.9451L31.0821 32.5014L32.4963 31.0872Z" fill="#8257E5"/>
               <path d="M31.0822 15.5308L15.5259 31.0872L16.9401 32.5014L32.4964 16.945L31.0822 15.5308Z" fill="#8257E5"/>
             </svg>
-          </a>  
+          </button>
         </header>
 
         <div class="menu">

@@ -43,7 +43,14 @@ header{
 header .btn-open{
   position: absolute;
   margin-left: 40rem;
+  background: none;
+  cursor: pointer;
    
+}
+
+header .btn-close{
+  background: none;
+  cursor: pointer;
 }
 
  
