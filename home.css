@@ -44,12 +44,14 @@ header .btn-open{
   position: absolute;
   margin-left: 40rem;
   background: none;
+  border: none;
   cursor: pointer;
    
 }
 
 header .btn-close{
   background: none;
+  border: none;
   cursor: pointer;
 }
 
